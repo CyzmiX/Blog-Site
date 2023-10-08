@@ -1,0 +1,59 @@
+<head>
+  <title>Blog Site</title>
+  
+  <link rel='stylesheet' href='bs/css/bootstrap.min.css'></link>
+  <link rel='stylesheet' href='main.css'></link>
+</head>
+
+<h1 style='color: white;'>
+  Number of articles <%= articles.length %>
+</h1>
+
+<style>
+	* {
+	  background: #111 !important;
+	}
+
+	.card {
+	  background: #222;
+	  border: 1px solid #dd2476;
+	  color: rgba(250, 250, 250, 0.8);
+	  margin-bottom: 2rem;
+	  border-radius: 3px;
+	}
+</style>
+
+<div>
+  <form action='/new'>
+    <button class='btn btn-success' type='submit'> New Article </button>
+  </form>
+
+  <form action='/' method='POST'>
+    <button id='del' class='btn btn-success' style='border-color: red;' type='submit' >DELETE ALL!!!!</button>
+  </form>
+</div>
+
+
+<div style='display: inline-flex; margin: 30px 30px; padding:10px 10px;'>
+  <% articles.forEach((article) => { %>
+    <div class='card' style='margin: 0 auto; text-align: center; width: 240px;'>
+   	  <h1 ><%= article.title %><h1>
+      <p style='color: grey'><%=article.desc %><p>
+      <form action='/'>
+   		<button class='btn btn-success' type='submit'> Read More </button>
+  	  </form>
+    </div>
+  <% }) %>
+</div>
+
+
+
+<script>
+  const btn = document.getElementById('del')
+
+  btn.addEventListener('submit', () => {
+    alert('boobs')
+
+  })
+
+</script>

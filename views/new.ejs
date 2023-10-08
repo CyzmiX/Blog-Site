@@ -1,0 +1,71 @@
+<head>
+  <title>Blog Site</title>
+  
+  <link rel='stylesheet' href='./bs/css/bootstrap.min.css'></link>
+  <link rel='stylesheet' href='./main.css'></link>
+</head>
+
+<style>
+	* {
+	  background: #111 !important;
+	}
+
+	.card {
+	  background: #222;
+	  border: 1px solid #dd2476;
+	  color: rgba(250, 250, 250, 0.8);
+	  margin-bottom: 2rem;
+	  border-radius: 3px;
+	}
+</style>
+
+<body style='color: white;'>
+  <form action='/new' method='POST'>
+    <div id='title'>
+      <label>Title</label>
+      <textarea for='title' id='title' name='title' required ></textarea>
+    </div>
+
+    <div id='desc'>
+      <label>Desc</label>
+      <textarea for='desc' id='desc' name='desc' required ></textarea>
+    </div>
+
+    <div id='article'>
+      <label>Article</label>
+      <textarea for='article' id='article' name='article' required ></textarea>
+    </div>
+
+    <button type='submit'>Upload</button>
+    <a href='/'>Cancel</a>
+  </form>
+<body>
+
+<style>
+  * {
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+  #title {
+    position: fixed;
+    bottom: 600px;
+  }
+
+  #desc {
+    position: fixed;
+    bottom: 550px;
+  }
+
+  #article {
+    position: fixed;
+    bottom: 400px;
+  }
+</style>
